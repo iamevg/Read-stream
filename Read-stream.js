@@ -20,6 +20,7 @@ function readStream(stream) {
       stream.on("data", ondata);
       stream.on("end", onend);
       stream.on("error", onerror);
+      stream.resume();
 
       function ondata(chunk) {
         stream.pause();
